@@ -24,8 +24,8 @@ services:
     volumes:
       - .:/usr/app
     ports:
-      - '3010:3010'
+      - '3021:3021'
     environment:
-      - PORT=3010
+      - PORT=3021
       - NODE_ENV=production
       - CHOKIDAR_USEPOLLING=true
