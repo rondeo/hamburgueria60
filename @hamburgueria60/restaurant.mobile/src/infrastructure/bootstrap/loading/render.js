@@ -1,5 +1,5 @@
-import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import * as mobx from 'mobx';
+import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { IntlProvider, addLocaleData } from 'react-intl';
@@ -11,13 +11,9 @@ import theme from 'infrastructure/theme/mui-theme';
 
 export default function render() {
   addLocaleData(pt);
-  /* develblock:start */
-  // Global MobX
-  window.mobx = mobx;
-  // Enforce actions
+
   mobx.configure({ enforceActions: 'always' });
-  // MobX React DevTools
-  /* develblock:end */
+
   const Root = () => (
     <MuiThemeProvider theme={theme}>
       <IntlProvider locale="pt-BR">
