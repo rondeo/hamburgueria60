@@ -1,0 +1,8 @@
+.wrapper {
+  margin-top: auto;
+  opacity: 1;
+
+  &_disabled {
+    opacity: 0.1;
+  }
+}

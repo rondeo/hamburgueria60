@@ -1,0 +1,34 @@
+html,
+body,
+body > #root {
+  margin: 0;
+  height: 100%;
+}
+
+.loading_component {
+  &__container {
+    height: 100%;
+    display: flex;
+
+    background-image: url("../../../features/Auth/assets/background.png");
+    background-size: auto;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+  }
+
+  &__content {
+    width: calc(100% - 64px);
+    padding-bottom: 16px;
+
+    background: linear-gradient(180deg, #a0151580 0%, #673ab7f2 80%);
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__emptySpace {
+    height: calc(124px + 194px);
+  }
+}

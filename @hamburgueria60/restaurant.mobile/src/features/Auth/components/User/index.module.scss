@@ -1,0 +1,25 @@
+@import "infrastructure/theme/_variables.scss";
+
+.container {
+  width: calc(100% - #{$spacing * 8});
+  padding-bottom: $spacing * 2;
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+}
+
+.title {
+  color: #fff;
+  margin-bottom: auto;
+  text-align: center;
+  font-size: 30px;
+  font-family: Caveat;
+  margin-top: -24px;
+}
+
+.content {
+  height: 110px;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+}

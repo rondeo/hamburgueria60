@@ -1,0 +1,9 @@
+{
+  "name": "hamburgueria60",
+  "dependencies": {},
+  "devDependencies": {},
+  "private": true,
+  "scripts": {
+    "test": "jest"
+  }
+}

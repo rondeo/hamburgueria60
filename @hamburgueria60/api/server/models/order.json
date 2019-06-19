@@ -1,0 +1,127 @@
+{
+  "name": "Order",
+  "base": "DefaultModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true,
+    "strictObjectIDCoercion": true
+  },
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "owner": {
+      "required": true,
+      "type": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "username": {
+          "type": "string"
+        }
+      }
+    },
+    "delivery": {
+      "type": {
+        "customer": {
+          "type": {
+            "name": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        },
+        "tax": {
+          "type": "object",
+          "default": 0
+        },
+        "address": {
+          "type": {
+            "streetName": {
+              "type": "string",
+              "default": ""
+            },
+            "number": {
+              "type": "string",
+              "default": ""
+            },
+            "block": {
+              "type": "string",
+              "default": ""
+            },
+            "details": {
+              "type": "string",
+              "default": ""
+            },
+            "neighborhood": {
+              "type": "string",
+              "default": ""
+            },
+            "referencePoint": {
+              "type": "string",
+              "default": ""
+            },
+            "geolocation": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        },
+        "telephone": {
+          "type": {
+            "type": "string",
+            "default": ""
+          }
+        }
+      },
+      "default": {}
+    },
+    "restaurant": {
+      "type": {
+        "table": {
+          "type": "string",
+          "default": ""
+        }
+      }
+    },
+    "items": {
+      "type": [
+        "object"
+      ],
+      "default": []
+    },
+    "subtotal": {
+      "type": "number",
+      "default": 0
+    },
+    "pricePaid": {
+      "type": "number",
+      "default": 0
+    },
+    "discountValue": {
+      "type": "number",
+      "default": 0
+    },
+    "additionValue": {
+      "type": "number",
+      "default": 0
+    },
+    "createdAt": {
+      "type": "date",
+      "defaultFn": "now"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,29 @@
+.summary {
+  &__wrapper {
+    position: sticky;
+    bottom: 0;
+
+    // TODO: color primary dark
+    // color: ${color('primary', 'contrastText')};
+
+    * {
+      color: inherit;
+    }
+  }
+
+  &__line {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 10px;
+
+    &:first-child {
+      padding-bottom: 0;
+    }
+
+    &_bold,
+    &_bold * {
+      font-weight: 500 !important;
+    }
+  }
+}

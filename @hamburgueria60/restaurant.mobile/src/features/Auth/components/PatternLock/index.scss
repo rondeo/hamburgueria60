@@ -1,0 +1,15 @@
+#Auth__PatternLock--placeholder {
+  &.patt-holder {
+    margin: auto;
+    background-color: transparent;
+  }
+  & .patt-circ.hovered {
+    border-color: #ffd27f;
+  }
+  & .patt-dots {
+    box-shadow: 0 0 7px 3px #dcc6e0;
+  }
+  & .patt-lines {
+    background-color: #ffd27f80;
+  }
+}

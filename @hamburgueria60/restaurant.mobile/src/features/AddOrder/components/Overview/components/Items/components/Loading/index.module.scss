@@ -1,0 +1,7 @@
+@import "infrastructure/theme/_variables.scss";
+
+.wrapper {
+  margin: $spacing * 2 auto 0 auto;
+  width: $spacing * 3;
+  height: $spacing * 3;
+}

@@ -1,0 +1,20 @@
+.container {
+  height: 100%;
+
+  background-image: url("./assets/background.png");
+  background-size: auto;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+
+  display: flex;
+}
+
+.content {
+  background: linear-gradient(180deg, #a0151580 0%, #673ab7f2 80%);
+
+  flex: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  align-items: center;
+}

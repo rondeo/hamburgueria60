@@ -1,0 +1,20 @@
+$size: 64px;
+
+.card {
+  &_disabled {
+    opacity: 0.25;
+    box-shadow: none;
+  }
+  &_invisible {
+    visibility: hidden;
+  }
+
+  * {
+    height: $size;
+    width: $size;
+  }
+
+  button {
+    line-height: $size;
+  }
+}

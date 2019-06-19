@@ -1,0 +1,8 @@
+.container {
+  min-height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.body {
+  flex: 1;
+}

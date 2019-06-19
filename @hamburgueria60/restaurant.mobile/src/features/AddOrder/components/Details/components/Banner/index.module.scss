@@ -1,0 +1,19 @@
+@import "infrastructure/theme/_variables.scss";
+
+.actions {
+  position: absolute;
+  left: 20px;
+  bottom: -10px;
+}
+.floatWrapper {
+  position: relative;
+  padding: 10px;
+}
+.mediaContent {
+  background-color: rgba($primaryColor, 0.85);
+  padding: 10px;
+
+  * {
+    color: white;
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "files.exclude": {
+    "node_modules/": true,
+    "**/node_modules/": true
+  },
+  "git.ignoreLimitWarning": true,
+  "eslint.workingDirectories": [
+    {
+      "directory": "./packages/restaurant.mobile",
+      "changeProcessCWD": true
+    }
+  ],
+  "eslint.enable": true,
+  "editor.detectIndentation": true,
+  "javascript.implicitProjectConfig.experimentalDecorators": true,
+  "eslint.alwaysShowStatus": true,
+  "eslint.autoFixOnSave": true,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": false
+  },
+  "typescript.validate.enable": false
+}
