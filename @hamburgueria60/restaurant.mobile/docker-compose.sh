@@ -35,7 +35,7 @@ done
 comand=""
 command+="docker-compose "
 
-command+="-f packages/restaurant.mobile/docker-compose.yml "
+command+="-f @hamburgueria60/restaurant.mobile/docker-compose.yml "
 command+="up "
 
 if [[ ! -z "$build" ]]; then
