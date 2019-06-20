@@ -1,0 +1,17 @@
+version: '3.5'
+
+services:
+  api:
+    container_name: h60_api__production
+    ports:
+      - '5000:5000'
+    environment:
+      - PORT=5000
+      - NODE_ENV=production
+    networks:
+      - docker_network__production
+
+networks:
+  docker_network__production:
+    external: true
+    name: docker_network__production

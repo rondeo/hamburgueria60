@@ -1,0 +1,17 @@
+version: '3.5'
+
+services:
+  api:
+    container_name: h60_api__preview
+    ports:
+      - '5001:5001'
+    environment:
+      - PORT=5001
+      - NODE_ENV=preview
+    networks:
+      - docker_network__preview
+
+networks:
+  docker_network__preview:
+    external: true
+    name: docker_network__preview

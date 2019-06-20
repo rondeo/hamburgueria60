@@ -1,0 +1,14 @@
+version: '3.5'
+
+services:
+  database__mongodb:
+    container_name: h60_database_mongodb__preview
+    command: mongod --port 5002
+    ports:
+        - 5002:5002
+    networks:
+      - docker_network__preview
+
+networks:
+  docker_network__preview:
+    name: docker_network__preview

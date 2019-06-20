@@ -1,0 +1,14 @@
+version: '3.5'
+
+services:
+  database__mongodb:
+    container_name: h60_database_mongodb__production
+    command: mongod --port 27017
+    ports:
+        - 27017:27017
+    networks:
+      - docker_network__production
+
+networks:
+  docker_network__production:
+    name: docker_network__production

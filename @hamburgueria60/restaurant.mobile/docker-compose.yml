@@ -1,21 +1,6 @@
-version: '2'
+version: '3.5'
 services:
-  restaurant.mobile--development:
-    build:
-      context: .
-      dockerfile: ./docker/development.Dockerfile
-    command: /usr/app/docker/entrypoint.development.sh
-    user: node
-    volumes:
-      - .:/usr/app
-    ports:
-      - '3000:3000'
-    environment:
-      - PORT=3000
-      - NODE_ENV=development
-      - CHOKIDAR_USEPOLLING=true
-
-  restaurant.mobile--production:
+  restaurant.mobile:
     build:
       context: .
       dockerfile: ./docker/production.Dockerfile
@@ -23,9 +8,6 @@ services:
     user: node
     volumes:
       - .:/usr/app
-    ports:
-      - '3021:3021'
     environment:
-      - PORT=3021
       - NODE_ENV=production
       - CHOKIDAR_USEPOLLING=true

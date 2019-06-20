@@ -1,0 +1,7 @@
+version: '3.5'
+services:
+  restaurant.mobile:
+    ports:
+      - '3020:3020'
+    environment:
+      - PORT=3020

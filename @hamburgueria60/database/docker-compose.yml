@@ -1,15 +1,10 @@
 version: '3.5'
 
-networks:
-  docker_network:
-    name: docker_network
-
 volumes:
   data:
 
 services:
   database__mongodb:
-    container_name: h60_database_mongodb
     image: mongo:latest
     environment:
       - MONGODB_USER="root" 
@@ -18,7 +13,3 @@ services:
       - MONGO_LOG_DIR=/dev/null
     volumes:
       - ./__database__:/data/db
-    ports:
-        - 27017:27017
-    networks:
-      - docker_network
