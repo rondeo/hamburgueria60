@@ -1,7 +1,11 @@
 export default function waitOnLoad() {
   return new Promise(resolve => {
-    window.onload = () => {
+    if (document.readyState === 'complete') {
       resolve();
-    };
+    } else {
+      window.onload = () => {
+        resolve();
+      };
+    }
   });
 }

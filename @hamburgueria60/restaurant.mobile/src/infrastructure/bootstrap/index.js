@@ -1,28 +1,27 @@
 import developmentOnly from './developmentOnly';
-import handleBackButton from './handleBackButton';
 import startFontObserver from './startFontObserver';
 
-import authController from 'features/Auth/controller';
 import loading from 'infrastructure/bootstrap/loading';
 import waitOnLoad from 'infrastructure/bootstrap/loading/waitOnLoad';
+import debug from 'infrastructure/debug';
+
+const log = debug('boostrap');
 
 export default async function bootstrap() {
   await startFontObserver();
 
-  // Cache loading
-  authController.startCache();
-
-  // Back button handling
-  handleBackButton();
-
+  log('importing render');
   const {
     default: render
   } = await import('infrastructure/bootstrap/loading/render');
 
-  await loading.unrender();
-
+  log('window.onload');
   await waitOnLoad();
 
+  log('unrendering loading');
+  await loading.unrender();
+
+  log('call render()');
   await render();
 }
 
