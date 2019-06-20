@@ -7,4 +7,4 @@ cp -r /usr/cache/node_modules/. /usr/app/node_modules/
 
 echo "Installing and running"
 npm run build
-serve -s /usr/app/build
+npm run deploy

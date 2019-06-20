@@ -1,8 +1,5 @@
 version: '3.5'
 
-volumes:
-  data:
-
 services:
   database__mongodb:
     image: mongo:latest

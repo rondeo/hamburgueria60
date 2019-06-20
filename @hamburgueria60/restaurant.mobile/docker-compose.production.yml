@@ -5,3 +5,4 @@ services:
       - '3020:3020'
     environment:
       - PORT=3020
+      - NODE_ENV=production

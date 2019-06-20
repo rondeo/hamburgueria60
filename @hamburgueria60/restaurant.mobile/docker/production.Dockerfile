@@ -3,7 +3,7 @@ FROM node:10
 ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
 ENV PATH=$PATH:/home/node/.npm-global/bin
 
-RUN npm install -g serve
+# RUN npm install -g serve
 
 # Create and define the node_modules's cache directory.
 RUN mkdir /usr/cache

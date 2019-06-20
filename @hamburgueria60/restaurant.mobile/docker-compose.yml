@@ -9,5 +9,4 @@ services:
     volumes:
       - .:/usr/app
     environment:
-      - NODE_ENV=production
       - CHOKIDAR_USEPOLLING=true
