@@ -1,0 +1,25 @@
+version: '3.5'
+
+services:
+  api:
+    container_name: h60_api
+    build:
+      context: .
+      dockerfile: ./docker/production.Dockerfile
+    command: sh /usr/app/docker/entrypoint.production.sh
+    user: node
+    volumes:
+      - .:/usr/app
+    ports:
+      - '5000:5000'
+    environment:
+      - PORT=5000
+      - NODE_ENV=production
+      - CHOKIDAR_USEPOLLING=true
+    networks:
+      - docker_network
+ 
+networks:
+  docker_network:
+    external: true
+    name: docker_network

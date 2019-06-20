@@ -4,7 +4,7 @@
     "connector": "memory"
   },
   "Mongodb": {
-    "host": "localhost",
+    "host": "h60_database_mongodb",
     "port": 27017,
     "url": "",
     "database": "h60",

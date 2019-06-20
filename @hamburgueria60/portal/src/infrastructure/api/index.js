@@ -1,9 +1,8 @@
 import Axios from 'axios';
-
 import authStore from 'features/Auth/store';
 
 export class Api {
-  url = `http://${window.location.hostname}:3001/api`;
+  url = 'http://api.hamburgueria60.com';
 
   // eslint-disable-next-line class-methods-use-this
   get(url, options) {

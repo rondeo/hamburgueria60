@@ -2,8 +2,10 @@ import Axios from 'axios';
 
 import authStore from 'features/Auth/store';
 
+const H60_API_URL = process.env.REACT_APP_H60_API_URL;
+
 export class Api {
-  url = `http://${window.location.hostname}:3001/api`;
+  url = H60_API_URL;
 
   // eslint-disable-next-line class-methods-use-this
   get(url, options) {
