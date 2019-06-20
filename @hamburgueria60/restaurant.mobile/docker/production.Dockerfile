@@ -1,9 +1,13 @@
-FROM node:10
+FROM node:10-alpine
 
 ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
 ENV PATH=$PATH:/home/node/.npm-global/bin
 
-# RUN npm install -g serve
+RUN apk add --no-cache \
+    autoconf \
+    automake \
+    g++ \
+    make
 
 # Create and define the node_modules's cache directory.
 RUN mkdir /usr/cache

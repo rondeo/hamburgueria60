@@ -9,6 +9,5 @@ services:
     user: node
     volumes:
       - .:/usr/app
-      - /usr/app/node_modules
     environment:
       - CHOKIDAR_USEPOLLING=true
